@@ -1,11 +1,15 @@
 :root {
 
     --bg-color: white;
+    /*  gray  */
+    --bg-color-2: #ccc;
     --text-color: black;
     /* yellow */
     --accent-color: #fcde1c;
     /* purple */
     --accent-color-2: #502977;
+    /* off-white */
+    --accent-color-3: #eee;
 }
 
 body {
@@ -48,10 +52,10 @@ nav a:hover {
 }
 
 div.stats-block {
-    background-color: var(--accent-color-2);
-    color: var(--bg-color);
+    background-color: var(--bg-color-2);
+    color: var(--text-color);
 }
 
 h4.stat {
-    color: var(--accent-color);
+    color: var(--accent-color-2);
 }
