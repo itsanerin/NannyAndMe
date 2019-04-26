@@ -29,6 +29,10 @@ ul#amount-list li {
     margin-right: 10px;
 }
 
+#amount-list li input {
+    margin-left: 10px;
+}
+
 div#donate-profile-detail {
     grid-row: 4;
     grid-column: 1 / span 4;
