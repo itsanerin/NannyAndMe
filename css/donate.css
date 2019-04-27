@@ -1,8 +1,13 @@
+.container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, max-content);
+    grid-row-gap: 10px;
+}
+
 #donate-bg-image img {
     grid-row: 1;
     width: 100%;
     margin: 0 auto;
-    margin-top: 10px;
 }
 
 div.donate,

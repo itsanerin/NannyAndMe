@@ -75,3 +75,7 @@ h3.subhead {
 h4.stat {
     font-size: 2em;
 }
+
+footer a {
+    text-decoration: none;
+}

@@ -59,3 +59,11 @@ div.stats-block {
 h4.stat {
     color: var(--accent-color-2);
 }
+
+footer {
+    background-color: var(--accent-color-2);
+}
+
+footer a {
+    color: var(--accent-color);
+}

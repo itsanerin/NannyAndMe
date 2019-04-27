@@ -1,4 +1,4 @@
-img {
+.container img {
     grid-column: 3 / span 2;
     grid-row: 2;
     width: 100%;
@@ -34,8 +34,8 @@ input {
 
 #login {
     grid-template-rows: repeat(4, max-content);
-    padding-top: 12%;
-    margin-right: 20px;
+    padding-top: 30%;
+    margin-right: 10px;
 }
 
 #login-username {
@@ -55,8 +55,8 @@ input {
 #signup {
     grid-template-rows: repeat(6, max-content);
     text-align: center;
-    margin-right: 20px;
-    padding-top: 6%;
+    margin-right: 10px;
+    padding-top: 18%;
 }
 
 #signup-username {
@@ -84,7 +84,7 @@ signup-email {
     margin: 0;
 }
 
-label {
+.container label {
     text-align: left;
 }
 
@@ -107,7 +107,7 @@ label {
 
 #signup p,
 #login p,
-label {
+.container label {
     color: var(--accent-color-2);
     margin: 0;
 }

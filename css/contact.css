@@ -35,7 +35,7 @@ h3.subhead {
     grid-row: 2;
 }
 
-form {
+.container form {
     grid-column: 1 / span 4;
     grid-row: 3;
     display: grid;
@@ -67,7 +67,7 @@ label {
 
 }
 
-input {
+.container input {
     grid-column: 2 / span 3;
     margin-right: 50px;
 }
