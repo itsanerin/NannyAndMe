@@ -1,4 +1,4 @@
-.container img {
+.main-container img {
     grid-column: 3 / span 2;
     grid-row: 2;
     width: 100%;
@@ -84,7 +84,7 @@ signup-email {
     margin: 0;
 }
 
-.container label {
+.main-container label {
     text-align: left;
 }
 

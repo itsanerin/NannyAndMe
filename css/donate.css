@@ -1,5 +1,5 @@
 .container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, max-content);
     grid-row-gap: 10px;
 }
@@ -12,17 +12,21 @@
 
 div.donate,
 #donate-bg-image {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 2;
 }
 
 div#donate-intro-text {
     grid-row: 2;
-    grid-column: 2 / span 2;
+    grid-column: 1 / span 2;
+    width: 40%;
+    margin: 0 auto;
 }
 
 div#donate-amount-list {
     grid-row: 3;
-    grid-column: 2 / span 3;
+    grid-column: 1 / span 2;
+    width: 60%;
+    margin: 0 auto;
 }
 
 ul#amount-list {
@@ -40,7 +44,7 @@ ul#amount-list li {
 
 div#donate-profile-detail {
     grid-row: 4;
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 2;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -54,13 +58,13 @@ fieldset {
 }
 
 fieldset#donate-personal-detail {
-    grid-column: 1 span 2;
+    grid-column: 1;
     /*    padding-top: 20px;*/
 
 }
 
 fieldset#donate-payment-detail {
-    grid-column: 3 span 2;
+    grid-column: 2;
     margin-top: 10px;
 
 }

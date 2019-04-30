@@ -5,7 +5,7 @@ const profileLink = document.getElementById('profile-link');
 function authState(user) {
     if (user) {
         document.body.classList.add('logged-in');
-        displayName.textContent = 'Hello, ' + user.displayName;
+                displayName.textContent = 'Hello, ' + user.displayName;
         profileLink.href = '/user.html?uid=' + user.uid;
     } else {
         document.body.classList.remove('logged-in');

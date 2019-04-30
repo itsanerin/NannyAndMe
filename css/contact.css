@@ -35,7 +35,7 @@ h3.subhead {
     grid-row: 2;
 }
 
-.container form {
+.main-container form {
     grid-column: 1 / span 4;
     grid-row: 3;
     display: grid;
@@ -43,6 +43,12 @@ h3.subhead {
     grid-template-rows: repeat(3, max-content);
     grid-row-gap: 20px;
     padding: 20px;
+}
+
+label {
+    grid-column: 1;
+    margin-right: 20px;
+
 }
 
 .name {
@@ -62,11 +68,6 @@ h3.subhead {
     height: 100px;
 }
 
-label {
-    grid-column: 1;
-
-}
-
 .container input {
     grid-column: 2 / span 3;
     margin-right: 50px;
@@ -82,4 +83,9 @@ div#SEND {
     padding: 20px;
     width: 100%;
     text-align: center;
+}
+
+.main-container input {
+    width: 100%;
+    grid-column: 2 / span 3;
 }
