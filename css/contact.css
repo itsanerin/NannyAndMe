@@ -83,9 +83,127 @@ div#SEND {
     padding: 20px;
     width: 100%;
     text-align: center;
+    margin: auto;
+    font-size: 20px;
+}
+
+.links p {
+    margin: 50px auto;
 }
 
 .main-container input {
     width: 100%;
     grid-column: 2 / span 3;
+}
+
+
+/*responsive styles*/
+
+/* mobile devices */
+@media only screen and (min-width: 120px) and (max-width: 416px) {
+
+    #contact-us {
+        /* set up inner grid */
+        grid-column: 1 / span 4;
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, max-content);
+        grid-row-gap: 20px;
+    }
+
+    .links {
+        grid-column: 1 / span 4;
+        grid-row: 3;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .links p {
+        margin: 30px auto;
+    }
+
+    #contact-us .subhead {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 510px) {
+
+    #contact-us {
+        /* set up inner grid */
+        grid-column: 1 / span 4;
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, max-content);
+        grid-row-gap: 20px;
+    }
+
+    .links {
+        grid-column: 1 / span 4;
+        grid-row: 3;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .links p {
+        margin: 35px auto;
+    }
+
+    #contact-us .subhead {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 510px) and (max-width: 700px) {
+
+    #contact-us {
+        /* set up inner grid */
+        grid-column: 1 / span 4;
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, max-content);
+        grid-row-gap: 20px;
+    }
+
+    .links {
+        grid-column: 1 / span 4;
+        grid-row: 3;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .links p {
+        margin: 35px auto;
+    }
+
+    #contact-us .subhead {
+        font-size: 24px;
+    }
+}
+
+/*tablet*/
+
+@media only screen and (min-width: 700px) and (max-width: 980px) {
+
+    #contact-us {
+        /* set up inner grid */
+        grid-row-gap: 20px;
+        padding: 10px;
+    }
+
+    #contact-us .subhead {
+        font-size: 22px;
+    }
+
+    .links {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .links p {
+        margin: 35px auto;
+    }
 }

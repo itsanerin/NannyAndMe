@@ -14,6 +14,9 @@
     <link href="./style.css" rel="stylesheet" />
     <link href="./css/user.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Gaegu|Poppins" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <title>Nanny & Me</title>
 
     <!--    Firebase-->
@@ -39,46 +42,60 @@
 <body>
     <div class="header">
         <h1 class="logo">Nanny & Me</h1>
-        <nav class="navbar navbar-expand-md">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">Search</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-link" href="user.html">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="donate.html">Donate</a>
-                    </li>
-                    <li class="nav-item">
-                    </li>
-                </ul>
-            </div>
+        <nav class="wide">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="dashboard.html">Search</a>
+                </li>
+                <li id="profile-nav">
+                    <a id="profile-link" href="user.html">Profile</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+                <li>
+                    <a href="donate.html">Donate</a>
+                </li>
+            </ul>
         </nav>
+
+        <nav class="mobile">
+            <ul>
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i></a>
+                </li>
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-search"></i></a>
+                </li>
+                <li id="profile-nav">
+                    <a id="profile-link" href="user.html"><i class="fas fa-user"></i></a>
+                </li>
+                <li>
+                    <a href="contact.html"><i class="far fa-envelope"></i></a>
+                </li>
+                <li>
+                    <a href="donate.html"><i class="fas fa-hand-holding-usd"></i></a>
+                </li>
+            </ul>
+        </nav>
+
         <div class="buttons">
-            <a href="login.html"><button class="login">Login</button></a>
-            <a href="signup.html"><button class="signup">Sign Up</button></a>
+            <!-- user info -->
+            <div id="user-info">
+                <div id="display-name"></div>
+                <button id="logout">Log Out</button>
+            </div>
+            <!-- login -->
+            <a href="login.html"><button id="login">Login</button></a>
+
+            <!-- sign up -->
+            <a href="signup.html"><button id="signup">Sign Up</button></a>
+
         </div>
     </div>
-
-    <h1 id="profile-display-name"></h1>
 
     <!--profile page-->
     <div class="profile-page-container">
@@ -89,30 +106,41 @@
                 <img id="profile-img" src="" alt="">
             </div>
 
-            <!-- edit profile picture -->
-            <!--
-<div id="add-photo">
-    <input type="file" id="photo-input" accept="image/jpeg, image/png, image/gif">
-    <button id="submit-photo">Upload Photo</button>
-</div>
--->
+            <!-- edit profile -->
+
+            <div id="edit-profile">
+                <input id="edit-display-name" placeholder="Edit profile name">
+                <input id="edit-age" placeholder="Edit Age">
+                <input id="edit-user-type" placeholder="Are you a Parent or Nanny?">
+                <input id="edit-zipcode" placeholder="What is your Zip Code?">
+                <input id="edit-availability" placeholder="Are you part-time or full-time?">
+                <button id="submit-display-name">Update</button>
+                <div id="add-photo">
+                    <input type="file" id="photo-input" accept="image/jpeg, image/png, image/gif">
+                    <button id="submit-photo">Upload Photo</button>
+                </div>
+                <input id="edit-tagline" placeholder="What would you like your tagline to be?">
+                <textarea id="edit-bio" placeholder="Tell us about yourself. What are you looking for, more specifically? Is there anything special about you that you'd like to share?"></textarea>
+            </div>
+            <button id="edit">Edit</button>
+
 
             <div id="profile-detail">
-                <h2 class="subtitle">Name of User</h2>
+                <h2 class="subtitle" id="profile-display-name"></h2>
                 <ul>
-                    <li><span class="user-type">Parent/Nanny</span> in <span class="location">Borough, New York, Zip Code</span></li>
-                    <li>Looking for <span class="frequency">part-time/full-time</span> <span class="opposite-user"> job/nanny </span></li>
-                    <li>Age</li>
+                    <li><span class="user-type" id="user-type-display"></span> in <span class="location" id="zipcode-display"></span></li>
+                    <li>Availability: <span class="frequency" id="availability-display"></span></li>
+                    <li>Age: <span id="age-display"></span></li>
                     <li>Last Signed In: <span class="last-signin">MM/DD/YY</span></li>
-                    <li><span class="user-rating">#.# ★ (Average Rating)</span></li>
+                    <li><span class="user-rating" id="user-rating-average">#.#</span> ★</li>
                 </ul>
             </div>
         </div>
 
         <!--profile description / bio-->
         <div id="profile-desc">
-            <h3 class="tagline">"User's Tag Line"</h3>
-            <p>This is a bio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Quam nulla porttitor massa id neque aliquam vestibulum. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Vitae aliquet nec ullamcorper sit amet. Posuere ac ut consequat semper viverra nam. Netus et malesuada fames ac turpis egestas integer eget. Neque laoreet suspendisse interdum consectetur libero.</p>
+            <h3 class="tagline" id="tagline">"User's Tag Line"</h3>
+            <p id="bio">This is a bio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Quam nulla porttitor massa id neque aliquam vestibulum. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Vitae aliquet nec ullamcorper sit amet. Posuere ac ut consequat semper viverra nam. Netus et malesuada fames ac turpis egestas integer eget. Neque laoreet suspendisse interdum consectetur libero.</p>
         </div>
 
         <!--update profile-->
@@ -184,7 +212,7 @@
         <div id="reviews">
             <!-- sample review 1-->
             <div class="review">
-                <div id="review-profile-image" style="height: 50px; width: 50px; background-color: grey; border-radius: 50%;">
+                <div id="review-profile-image" class="photo">
 
                     <img src="" alt="">
                 </div>
@@ -195,7 +223,7 @@
             </div>
             <!-- sample review 2-->
             <div class="review">
-                <div id="review-profile-image">
+                <div id="review-profile-image" class="photo">
                     <img src="" alt="">
                 </div>
                 <span class="author">Reviewer Name</span>
@@ -207,16 +235,20 @@
     </div>
 
     <footer>
-        <a href="signup.html">Sign Up</a>
-        <input type="text" class="searchTerm" placeholder="Search">
-        <a href="#">About Us</a>
-        <a href="#">Manage My Account</a>
+        <a href="signup.html" class="pag">Sign Up</a>
+        <a href="dashboard.html" class="pag">Search</a>
+        <a href="#" class="pag">Manage My Account</a>
 
-        <a href="login.html">Log In</a>
-        <a href="donate.html">Make a Donation</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="contact.html">FAQ</a>
-        <img src="images/social-icons-round.png" id="social-links1" />
+        <a href="login.html" class="pag">Log In</a>
+        <a href="donate.html" class="pag">Make a Donation</a>
+        <a href="contact.html" class="pag">Contact Us</a>
+        <div id="social-links1">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-google-plus"></i>
+        </div>
         <div class="small-links">
             <a href="#" class="small">Copyright</a>
             <a href="#" class="small">Privacy Statement</a>

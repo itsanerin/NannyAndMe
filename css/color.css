@@ -34,10 +34,6 @@ button {
     border-color: var(--bg-color);
 }
 
-h1.logo {
-    margin-bottom: 20px;
-}
-
 nav a,
 h1.logo {
     color: var(--accent-color);
@@ -64,6 +60,7 @@ footer {
     background-color: var(--accent-color-2);
 }
 
-footer a {
+footer a,
+#social-links1 {
     color: var(--accent-color);
 }

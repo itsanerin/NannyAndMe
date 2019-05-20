@@ -1,5 +1,8 @@
 const reviewsDiv = document.getElementById('reviews');
-const reviewRef = firebase.database().ref('reviews');
+const reviewRef = firebase.database().ref('reviews').orderByChild('reviewee').equalTo(uid);
+
+let ratingTotal = 0;
+let ratingNumber = 0;
 
 ref.on('child_added', function (snapshot) {
     createReview(snapshot.val());
@@ -12,6 +15,12 @@ function el(tag, clas) {
 }
 
 function createReview(review) {
+
+    // calculate review value
+    ratingTotal += review.rating || 0;
+    ratingNumber++;
+    document.getElementById('user-rating-average').textContent = ratingTotal / ratingNumber
+
     const reviewDiv = el('div', 'review');
     const reviewText = el('div', 'review-text');
     reviewText.textContent = review.text;
@@ -23,7 +32,8 @@ function createReview(review) {
     const link = el('a');
     author.appendChild(link);
     link.textContent = review.displayName;
-    link.href = 'user.html?uid=' + post.uid;
+    link.href = 'user.html?uid=' + review.reviewer;
+    reviewDiv.appendChild(author);
 
     const date = el('span', 'date');
     date.textContent = review.date.split(' ').slice(0, 4).join(' ');
@@ -31,18 +41,21 @@ function createReview(review) {
     const photo = el('div', 'photo');
     const img = new Image();
     img.onlcik = function () {
-        location.href = 'user.html?uid=' + post.uid
+        location.href = 'user.html?uid=' + review.reviewer;
     }
     photo.appendChild(img);
     reviewDiv.appendChild(photo);
 
-    const userRef = firebase.database().ref('users').child(review.uid);
+    console.log(review)
+    const userRef = firebase.database().ref('parent').child(review.reviewer);
     userRef.once('value', function (snapshot) {
-        img.src = snapshot.val().photo;
+        if (snapshot.val().photo) {
+            img.src = snapshot.val().photo;
+        }
+
     });
 
-    reviewInfo.innerHTML += "by ";
-    reviewInfo.appendChild(author);
+
     reviewInfo.innerHTML += "on ";
     reviewInfo.appendChild(date);
 

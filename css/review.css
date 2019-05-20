@@ -126,3 +126,22 @@
     background-color: var(--accent-color-3);
     padding: 20px;
 }
+
+
+#add-photo,
+#edit,
+#edit-profile,
+#post {
+    display: none;
+}
+
+.is-user #add-photo,
+.is-user #edit {
+    display: block;
+}
+
+.is-user #write-review-title,
+.is-user #writing-review,
+.is-user #rating {
+    display: none;
+}

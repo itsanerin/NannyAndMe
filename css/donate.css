@@ -117,3 +117,20 @@ button#amt-submit-btn {
         margin-top: 0;
     }
 }
+
+/*responsive styles*/
+
+/* mobile devices */
+@media only screen and (min-width: 120px) and (max-width: 375px) {}
+
+@media only screen and (min-width: 375px) and (max-width: 416px) {}
+
+@media only screen and (min-width: 416px) and (max-width: 510px) {}
+
+@media only screen and (min-width: 510px) and (max-width: 700px) {}
+
+/*tablet*/
+
+@media only screen and (min-width: 700px) and (max-width: 980px) {}
+
+@media only screen and (min-width: 980px) and (max-width: 1320px) {}

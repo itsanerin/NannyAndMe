@@ -5,15 +5,15 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="js/jquery-3.4.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- End of Bootstrap -->
-
     <link href="./style.css" rel="stylesheet" />
     <link href="css/home.css" rel="stylesheet" />
+
     <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Gaegu|Poppins" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Nanny & Me</title>
 
     <!--    Firebase-->
@@ -37,60 +37,73 @@
 
 <body>
     <div class="main-container">
-        
-        
-        
+
+
+
         <div class="header">
             <h1 class="logo">Nanny & Me</h1>
-            <nav class="navbar navbar-expand-md">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="dashboard.html">Search</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="profile-link" href="user.html">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="donate.html">Donate</a>
-                        </li>
-                        <li class="nav-item">
-                        </li>
-                    </ul>
-                </div>
+            <nav class="wide">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html">Search</a>
+                    </li>
+                    <li id="profile-nav">
+                        <a id="profile-link" href="user.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="donate.html">Donate</a>
+                    </li>
+                </ul>
             </nav>
-            <div class="buttons">
-            <!-- login -->
-                    <a href="login.html"><button class="login">Login</button></a>
 
-                    <!-- sign up -->
-                    <a href="signup.html"><button class="signup">Sign Up</button></a>
+            <nav class="mobile">
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-search"></i></a>
+                    </li>
+                    <li id="profile-nav">
+                        <a id="profile-link" href="user.html"><i class="fas fa-user"></i></a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><i class="far fa-envelope"></i></a>
+                    </li>
+                    <li>
+                        <a href="donate.html"><i class="fas fa-hand-holding-usd"></i></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="buttons">
+                <!-- user info -->
+                <div id="user-info">
+                    <div id="display-name"></div>
+                    <button id="logout">Log Out</button>
+                </div>
+                <!-- login -->
+                <a href="login.html"><button id="login">Login</button></a>
+
+                <!-- sign up -->
+                <a href="signup.html"><button id="signup">Sign Up</button></a>
+
             </div>
         </div>
 
-        
+
 
         <h2 class="subhead" id="1">Helping NYC families find affordable Child Care in their own communities.</h2>
         <img src="images/play-banner.jpg" class="mother">
 
         <h2 class="subtitle">Mission Statement</h2>
-        <p class="mission">Every parent and child deserves great child care -- regardless of their neighborhood or income. <i>Nanny &amp; Me</i> is a place to find and book local child care providers so families can find the perfect fit.</p>
+        <p class="mission">Every parent and child deserves great child care -- regardless of their neighborhood or income. <i>Nanny &amp; Me</i> is a place to find and book local nannies so families can find the perfect fit.</p>
         <p class="mission-author"><i>-Nanny &amp; Me</i></p>
 
         <!-- statistics section -->
@@ -119,16 +132,20 @@
     </div>
 
     <footer>
-        <a href="signup.html">Sign Up</a>
-        <input type="text" class="searchTerm" placeholder="Search">
-        <a href="#">About Us</a>
-        <a href="#">Manage My Account</a>
+        <a href="signup.html" class="pag">Sign Up</a>
+        <a href="dashboard.html" class="pag">Search</a>
+        <a href="#" class="pag">Manage My Account</a>
 
-        <a href="login.html">Log In</a>
-        <a href="donate.html">Make a Donation</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="contact.html">FAQ</a>
-        <img src="images/social-icons-round.png" id="social-links1" />
+        <a href="login.html" class="pag">Log In</a>
+        <a href="donate.html" class="pag">Make a Donation</a>
+        <a href="contact.html" class="pag">Contact Us</a>
+        <div id="social-links1">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-google-plus"></i>
+        </div>
         <div class="small-links">
             <a href="#" class="small">Copyright</a>
             <a href="#" class="small">Privacy Statement</a>

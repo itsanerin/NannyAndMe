@@ -7,20 +7,26 @@ const ref = db.ref('reviews');
 //add a new review to the database
 function addReview() {
 
-    const rating = document.getElementsByName('stars')[0];
-    if (rating.value == 0) {
-        alert('please add a rating');
-
-    } else {
-
+    const ratings = document.getElementsByName('stars');
+    let rating = 0;
+    for (let i = 0; i < ratings.length; i++) {
+        if (ratings[i].checked) {
+            rating = i;
+        }
     }
+    if (rating == 0) {
+        alert('please add a rating');
+    }
+    console.log(rating)
 
     const info = {
         text: reviewText.value,
         date: Date(),
-        uid: firebase.auth().currentUser.uid,
+        reviewer: firebase.auth().currentUser.uid,
+        //user being reviewed
+        reviewee: uid,
         displayName: firebase.auth().currentUser.displayName,
-        rating: rating.value
+        rating: rating
     };
 
     const promise = ref.push(info);
