@@ -31,6 +31,12 @@
     border-radius: 50%;
 }
 
+#profile-photo img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
 #photo-input {
     background-color: var(--accent-color-2);
     color: var(--accent-color);

@@ -6,6 +6,7 @@ const signupPassword = document.getElementById('signup-password');
 
 //console.log(signupButton, signupUsername, signupEmail, signupPassword);
 
+signupButton.onclick = createUser;
 
 function updateUser(credential, type) {
     const userInfo = {
@@ -53,5 +54,4 @@ function createUser() {
         console.log(error);
         alert(error.message);
     });
-    signupButton.onclick = createUser;
 }

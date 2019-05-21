@@ -17,6 +17,12 @@
     border-radius: 50%;
 }
 
+img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
 .author {
     grid-column: 1;
     grid-row: 2;

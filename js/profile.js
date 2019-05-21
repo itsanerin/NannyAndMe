@@ -123,7 +123,8 @@ function uploadPhoto() {
         const promise = photoRef.put(file);
 
         promise.then(function (snapshot) {
-            return snapshot.ref.getDownloadUrl();
+            console.log(snapshot);
+            return snapshot.ref.getDownloadURL();
         }).then(updatePhoto);
 
     } else {
@@ -131,15 +132,15 @@ function uploadPhoto() {
     }
 
     function updatePhoto(url) {
-        ref.update({
+        userRef.update({
             photo: url
         });
     }
+}
 
-    function displayPhoto(url) {
-        const profileImg = get('profile-img');
-        profileImg.src = url;
-        const addPhoto = get('add-photo');
-        addPhoto.style.display = 'none';
-    }
+function displayPhoto(url) {
+    const profileImg = get('profile-img');
+    profileImg.src = url;
+    const addPhoto = get('add-photo');
+    addPhoto.style.display = 'none';
 }
