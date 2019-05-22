@@ -8,6 +8,8 @@
     grid-row: 1;
     width: 100%;
     margin: 0 auto;
+    border-radius: 0;
+    height: auto;
 }
 
 div.donate,
@@ -107,8 +109,62 @@ button#amt-submit-btn {
     clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+/*responsive styles*/
+
+/* mobile devices */
+@media only screen and (min-width: 120px) and (max-width: 375px) {
+
+    div#donate-intro-text {
+        width: 85%;
+    }
+
+    div#donate-intro-text h2 {
+        font-size: 24px;
+    }
+
+    #donate-amount-list ul {
+        padding: 0;
+    }
+
+    #donate-amount-list button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #donate-amount-list input {
+        width: 100%;
+    }
+
+    div#donate-profile-detail {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+    div#donate-profile-detail label {
+        font-size: 11px;
+        margin: 0;
+    }
+
+    div#donate-profile-detail input {
+        padding: 5px;
+        margin: 5px;
+        width: 60%;
+        font-size: 14px;
+    }
+
+    div.submit-section {
+        margin: 0;
+    }
+
+    div.submit-section #checkbox {
+        width: 10px;
+        margin: 0;
+    }
+
+    div.submit-section button#amt-submit-btn {
+        margin: 10px auto 0;
+    }
 
     .col-25,
     .col-75,
@@ -118,19 +174,254 @@ button#amt-submit-btn {
     }
 }
 
-/*responsive styles*/
+@media only screen and (min-width: 375px) and (max-width: 416px) {
 
-/* mobile devices */
-@media only screen and (min-width: 120px) and (max-width: 375px) {}
+    div#donate-intro-text {
+        width: 85%;
+    }
 
-@media only screen and (min-width: 375px) and (max-width: 416px) {}
+    div#donate-intro-text h2 {
+        font-size: 24px;
+    }
 
-@media only screen and (min-width: 416px) and (max-width: 510px) {}
+    #donate-amount-list ul {
+        padding: 0;
+    }
 
-@media only screen and (min-width: 510px) and (max-width: 700px) {}
+    #donate-amount-list button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #donate-amount-list input {
+        width: 100%;
+    }
+
+    div#donate-profile-detail {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+    div#donate-profile-detail label {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    div#donate-profile-detail input {
+        padding: 5px;
+        margin: 5px;
+        width: 50%;
+        font-size: 14px;
+    }
+
+    div.submit-section {
+        margin: 0;
+    }
+
+    div.submit-section #checkbox {
+        width: 10px;
+        margin: 0;
+    }
+
+    div.submit-section button#amt-submit-btn {
+        margin: 10px auto 0;
+    }
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 510px) {
+
+
+    div#donate-intro-text {
+        width: 85%;
+    }
+
+    div#donate-intro-text h2 {
+        font-size: 24px;
+    }
+
+    #donate-amount-list ul {
+        padding: 0;
+    }
+
+    #donate-amount-list button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #donate-amount-list input {
+        width: 100%;
+    }
+
+    div#donate-profile-detail {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+    div#donate-profile-detail label {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    div#donate-profile-detail input {
+        padding: 5px;
+        margin: 5px;
+        width: 50%;
+        font-size: 14px;
+    }
+
+    div.submit-section {
+        margin: 0;
+    }
+
+    div.submit-section #checkbox {
+        width: 10px;
+        margin: 0;
+    }
+
+    div.submit-section button#amt-submit-btn {
+        margin: 10px auto 0;
+    }
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 510px) and (max-width: 700px) {
+
+
+    div#donate-intro-text {
+        width: 85%;
+    }
+
+    div#donate-intro-text h2 {
+        font-size: 24px;
+    }
+
+    #donate-amount-list ul {
+        padding: 0;
+    }
+
+    #donate-amount-list button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #donate-amount-list input {
+        width: 100%;
+    }
+
+    div#donate-profile-detail {
+        padding: 15px;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    div#donate-profile-detail label {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    div#donate-profile-detail input {
+        padding: 5px;
+        margin: 5px;
+        width: 50%;
+        font-size: 14px;
+    }
+
+    div.submit-section {
+        margin: 0;
+    }
+
+    div.submit-section #checkbox {
+        width: 10px;
+        margin: 0;
+    }
+
+    div.submit-section button#amt-submit-btn {
+        margin: 10px auto 0;
+    }
+}
 
 /*tablet*/
 
-@media only screen and (min-width: 700px) and (max-width: 980px) {}
+@media only screen and (min-width: 700px) and (max-width: 905px) {
 
-@media only screen and (min-width: 980px) and (max-width: 1320px) {}
+
+    div#donate-intro-text {
+        width: 85%;
+    }
+
+    div#donate-intro-text h2 {
+        font-size: 24px;
+    }
+
+    div#donate-amount-list {
+        width: auto;
+    }
+
+    #donate-amount-list ul {
+        padding: 0;
+    }
+
+    #donate-amount-list button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #donate-amount-list input {
+        width: 100%;
+    }
+
+    div#donate-profile-detail {
+        padding: 15px;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    div#donate-profile-detail label {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    div#donate-profile-detail input {
+        padding: 5px;
+        margin: 5px;
+        width: 50%;
+        font-size: 14px;
+    }
+
+    div.submit-section {
+        margin: 0;
+    }
+
+    div.submit-section #checkbox {
+        width: 10px;
+        margin: 0;
+    }
+
+    div.submit-section button#amt-submit-btn {
+        margin: 10px auto 0;
+    }
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 905px) and (max-width: 1320px) {}
