@@ -35,20 +35,10 @@ div.header {
     grid-template-rows: repeat(2, max-content);
 }
 
-h1.logo {
-
-    grid-column: 1 / span 4;
-    text-align: center;
-    grid-row: 1;
-    height: 100px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
-
 .buttons {
     grid-column: 4;
     grid-row: 1;
-    margin: 20% 0 0 40%;
+    margin: 2% 0 0 35%;
     height: 3em;
 }
 
@@ -56,7 +46,7 @@ h1.logo {
     display: inline-block;
     margin-right: 10px;
     float: left;
-    width: 100px;
+    width: 90px;
     margin-bottom: 8px;
 }
 
@@ -98,7 +88,7 @@ li.signup {
 
 nav {
     grid-column: 1 / span 4;
-    grid-row: 2;
+    grid-row: 1;
     margin: 0 auto;
     width: 90%;
 }
@@ -114,7 +104,7 @@ nav ul {
 nav li {
     float: left;
     list-style-type: none;
-    width: 23%
+    width: 21%
 }
 
 nav.wide {
@@ -127,6 +117,16 @@ nav.mobile {
 
 .logged-in nav li {
     width: 18%;
+}
+
+.logo {
+
+    /*    grid-column: 1 / span 4;*/
+    text-align: center;
+    grid-row: 1;
+    /*    height: 100px;*/
+    margin: 0 auto;
+    /*    margin-bottom: 5px;*/
 }
 
 .subhead {
@@ -158,7 +158,7 @@ h3.subhead {
 footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, max-content);
+    grid-template-rows: repeat(2, max-content);
     grid-row-gap: 20px;
     grid-column-gap: 10px;
     text-align: center;
@@ -179,12 +179,12 @@ footer input {
     grid-column: 1 / span 3;
     width: 90%;
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    /*    margin-top: 20px;*/
+    margin-bottom: 15px;
 }
 
 footer .fab {
-    width: 15%;
+    width: 8%;
     font-size: 30px;
 }
 
@@ -194,7 +194,7 @@ footer .fab:hover {
 
 footer .small-links {
     grid-column: 1 / span 3;
-    grid-row: 4;
+    grid-row: 2;
     font-size: .7em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -224,12 +224,18 @@ footer .small-links {
         padding: 0;
     }
 
-    h1.logo {
+    nav li {
+        width: 25%;
+    }
+
+    /*
+    .logo {
         font-size: 30px !important;
         letter-spacing: 2px !important;
         margin-bottom: 0;
         height: auto;
     }
+*/
 
     .buttons {
         grid-column: 1 / span 4;
@@ -302,12 +308,18 @@ footer .small-links {
         padding: 0;
     }
 
-    h1.logo {
+    nav li {
+        width: 25%;
+    }
+
+    /*
+    .logo {
         font-size: 30px !important;
         letter-spacing: 2px !important;
         margin-bottom: 0;
         height: auto;
     }
+*/
 
     .buttons {
         grid-column: 1 / span 4;
@@ -380,12 +392,18 @@ footer .small-links {
         padding: 0;
     }
 
-    h1.logo {
+    nav li {
+        width: 25%;
+    }
+
+    /*
+    .logo {
         font-size: 30px !important;
         letter-spacing: 2px !important;
         margin-bottom: 0;
         height: auto;
     }
+*/
 
     .buttons {
         grid-column: 1 / span 4;
@@ -457,7 +475,12 @@ footer .small-links {
         padding: 0;
     }
 
-    h1.logo {
+    nav li {
+        width: 25%;
+    }
+
+    /*
+    .logo {
         grid-column: 1 / span 4;
         font-size: 2.6rem !important;
         letter-spacing: 2px !important;
@@ -465,6 +488,7 @@ footer .small-links {
         height: auto;
         width: 60%;
     }
+*/
 
     .buttons {
         grid-column: 2/ span 2;
@@ -539,21 +563,25 @@ footer .small-links {
         padding: 0;
     }
 
-    h1.logo {
-        font-size: 5rem !important;
-        letter-spacing: 2px !important;
-        margin: auto height: auto;
+    nav li {
+        font-size: 13.5px !important;
+    }
+
+    .logo {
+        font-size: 18px !important;
+        font-weight: 100;
     }
 
     .buttons {
         grid-column: 4;
-        margin: 7.5% auto 0 80px;
+        margin: 2% auto 0 30px;
         height: auto;
     }
 
     .buttons button {
-        width: 90px;
-        height: 40px;
+        width: 60px;
+        height: 30px;
+        font-size: 10px;
     }
 
     footer {
@@ -615,22 +643,24 @@ footer .small-links {
         padding: 0;
     }
 
-    h1.logo {
-        font-size: 5.5rem !important;
-        letter-spacing: 2px !important;
-        margin-bottom: 0;
-        height: auto;
+    nav li {
+        font-size: 16px !important;
+    }
+
+    .logo {
+        font-size: 25px !important;
     }
 
     .buttons {
         grid-column: 4;
-        margin: 7.5% auto 0 60px;
+        margin: 3% auto 0 42px;
         height: auto;
     }
 
     .buttons button {
-        width: 100px;
-        height: 40px;
+        width: 70px;
+        height: 30px;
+        font-size: 12px;
     }
 
     footer {

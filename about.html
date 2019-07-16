@@ -31,7 +31,6 @@
             messagingSenderId: "807990200836"
         };
         firebase.initializeApp(config);
-
     </script>
 </head>
 
@@ -41,11 +40,12 @@
 
 
         <div class="header">
-            <h1 class="logo">Nanny & Me</h1>
-            <nav>
+            <nav class="wide">
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html" class="logo">
+                            Nanny & Me
+                        </a>
                     </li>
                     <li>
                         <a href="dashboard.html">Search</a>
@@ -61,6 +61,27 @@
                     </li>
                 </ul>
             </nav>
+
+            <nav class="mobile">
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-search"></i></a>
+                    </li>
+                    <li id="profile-nav">
+                        <a id="profile-link" href="user.html"><i class="fas fa-user"></i></a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><i class="far fa-envelope"></i></a>
+                    </li>
+                    <li>
+                        <a href="donate.html"><i class="fas fa-hand-holding-usd"></i></a>
+                    </li>
+                </ul>
+            </nav>
+
             <div class="buttons">
                 <!-- user info -->
                 <div id="user-info">
@@ -76,20 +97,21 @@
             </div>
         </div>
 
+
         <div>
             <img src="images/about-screenshot.png">
         </div>
     </div>
 
     <footer>
-        <a href="signup.html">Sign Up</a>
-        <input type="text" class="searchTerm" placeholder="Search">
-        <a href="#">Manage My Account</a>
 
-        <a href="login.html">Log In</a>
-        <a href="donate.html">Make a Donation</a>
-        <a href="contact.html">Contact Us</a>
-        <img src="images/social-icons-round.png" id="social-links1" />
+        <div id="social-links1">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-google-plus"></i>
+        </div>
         <div class="small-links">
             <a href="#" class="small">Copyright</a>
             <a href="#" class="small">Privacy Statement</a>
