@@ -111,8 +111,17 @@ nav.wide {
     display: block;
 }
 
-nav.mobile {
+nav.mobile,
+#mobile-logo {
     display: none;
+}
+
+#mobile-logo {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    margin: 0;
+    height: auto;
+    width: 60%;
 }
 
 .logged-in nav li {
@@ -222,29 +231,34 @@ footer .small-links {
 
     nav ul {
         padding: 0;
+        grid-row: 2;
     }
 
     nav li {
         width: 25%;
     }
 
-    /*
-    .logo {
-        font-size: 30px !important;
-        letter-spacing: 2px !important;
-        margin-bottom: 0;
-        height: auto;
+
+    #mobile-logo {
+        display: inline-block;
+        font-size: 35px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        width: 100%;
     }
-*/
+
 
     .buttons {
-        grid-column: 1 / span 4;
-        margin: 14% auto 0 auto;
+        grid-column: 2/ span 2;
+        grid-row: 3;
+        margin: 8px auto 0;
+        width: 200px;
         height: auto;
     }
 
     .buttons button {
-        width: 90px;
+        width: 80px;
         height: 30px;
     }
 
@@ -306,29 +320,34 @@ footer .small-links {
 
     nav ul {
         padding: 0;
+        grid-row: 2;
     }
 
     nav li {
         width: 25%;
     }
 
-    /*
-    .logo {
-        font-size: 30px !important;
-        letter-spacing: 2px !important;
-        margin-bottom: 0;
-        height: auto;
+
+    #mobile-logo {
+        display: inline-block;
+        font-size: 35px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        width: 100%;
     }
-*/
+
 
     .buttons {
-        grid-column: 1 / span 4;
-        margin: 12% auto 0 auto;
+        grid-column: 2/ span 2;
+        grid-row: 3;
+        margin: 8px auto 0;
+        width: 220px;
         height: auto;
     }
 
     .buttons button {
-        width: 90px;
+        width: 100px;
         height: 30px;
     }
 
@@ -390,29 +409,33 @@ footer .small-links {
 
     nav ul {
         padding: 0;
+        grid-row: 2;
     }
 
     nav li {
         width: 25%;
     }
 
-    /*
-    .logo {
-        font-size: 30px !important;
-        letter-spacing: 2px !important;
-        margin-bottom: 0;
-        height: auto;
+
+    #mobile-logo {
+        display: inline-block;
+        font-size: 35px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        margin-bottom: 10px;
     }
-*/
+
 
     .buttons {
-        grid-column: 1 / span 4;
-        margin: 12% auto 0 auto;
+        grid-column: 2/ span 2;
+        grid-row: 3;
+        margin: 8px auto 0;
+        width: 220px;
         height: auto;
     }
 
     .buttons button {
-        width: 90px;
+        width: 100px;
         height: 30px;
     }
 
@@ -473,32 +496,33 @@ footer .small-links {
 
     nav ul {
         padding: 0;
+        grid-row: 2;
     }
 
     nav li {
         width: 25%;
     }
 
-    /*
-    .logo {
-        grid-column: 1 / span 4;
-        font-size: 2.6rem !important;
-        letter-spacing: 2px !important;
-        margin-bottom: 0;
-        height: auto;
-        width: 60%;
+
+    #mobile-logo {
+        display: inline-block;
+        font-size: 40px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        margin-bottom: 10px;
     }
-*/
+
 
     .buttons {
         grid-column: 2/ span 2;
-        grid-row: 1;
-        margin: 20% auto 0%;
+        grid-row: 3;
+        margin: 8px auto 0;
+        width: 220px;
         height: auto;
     }
 
     .buttons button {
-        width: 90px;
+        width: 100px;
         height: 30px;
     }
 
@@ -548,7 +572,6 @@ footer .small-links {
     nav.wide {
         display: block;
         margin-top: 10px;
-        font-size: 18px;
     }
 
     nav.mobile {
@@ -564,11 +587,10 @@ footer .small-links {
     }
 
     nav li {
-        font-size: 13.5px !important;
+        font-size: 16px !important;
     }
 
     .logo {
-        font-size: 18px !important;
         font-weight: 100;
     }
 
@@ -628,7 +650,6 @@ footer .small-links {
     nav.wide {
         display: block;
         margin-top: 10px;
-        font-size: 18px;
     }
 
     nav.mobile {
@@ -644,10 +665,6 @@ footer .small-links {
     }
 
     nav li {
-        font-size: 16px !important;
-    }
-
-    .logo {
         font-size: 25px !important;
     }
 
